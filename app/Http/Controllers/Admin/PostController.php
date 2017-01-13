@@ -73,7 +73,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $data = dispatch(new PostFormFields($id));
-        var_dump($data);exit;
+        
         $data = is_array($data) ? $data : $this->fields;
 
         return view('admin.post.edit', $data);
