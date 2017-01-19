@@ -1,19 +1,14 @@
 <?php
 
-namespace App\Jobs;
+namespace App\Services;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Post;
 use App\Tag;
 use Carbon\Carbon;
 
-class PostFormFields implements ShouldQueue
+class PostFormFields
 {
-    use InteractsWithQueue, Queueable, SerializesModels;
-
+    
     /**
      * The id (if any) of the Post row
      *
@@ -37,26 +32,18 @@ class PostFormFields implements ShouldQueue
         'publish_time' => '',
         'layout' => 'blog.layouts.post',
         'tags' => [],
+        'allTags' => [],
     ];
-
-    /**
-     * Create a new job instance.
-     *
-     * @param integer $id
-     * @return void
-     */
-    public function __construct($id = null)
-    {
-        $this->id = $id;
-    }
 
     /**
      * Execute the job.
      *
      * @return array of fieldnames => values
      */
-    public function handle()
+    public function formFields($id = null)
     {
+        $this->id = $id;
+
         $fields = $this->fieldList;
 
         if ($this->id) {

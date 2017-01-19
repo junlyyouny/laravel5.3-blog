@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Jobs\PostFormFields;
+use App\Services\PostFormFields;
 use App\Http\Requests;
 use App\Http\Requests\PostCreateRequest;
 use App\Http\Requests\PostUpdateRequest;
@@ -12,19 +12,13 @@ use App\Post;
 
 class PostController extends Controller
 {
-	protected $fields = [
-        'title' => '',
-        'subtitle' => '',
-        'page_image' => '',
-        'content' => '',
-        'meta_description' => '',
-        'is_draft' => "0",
-        'publish_date' => '',
-        'publish_time' => '',
-        'layout' => 'blog.layouts.post',
-        'tags' => [],
-        'allTags' => [],
-    ];
+
+    protected $formFields;
+
+    public function __construct(PostFormFields $formFields)
+    {
+        $this->formFields = $formFields;
+    }
 
     /**
       * Display a listing of the posts.
@@ -42,9 +36,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $data = dispatch(new PostFormFields());
-
-        $data = is_array($data) ? $data : $this->fields;
+        $data = $this->formFields->formFields();
 
         return view('admin.post.create', $data);
     }
@@ -57,10 +49,10 @@ class PostController extends Controller
     public function store(PostCreateRequest $request)
     {
         $post = Post::create($request->postFillData());
+        
         $post->syncTags($request->get('tags', []));
 
-        return redirect()
-                        ->route('admin.post')
+        return redirect('/admin/post')
                         ->withSuccess('New Post Successfully Created.');
     }
 
@@ -72,9 +64,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $data = dispatch(new PostFormFields($id));
-        
-        $data = is_array($data) ? $data : $this->fields;
+        $data = $this->formFields->formFields($id);
 
         return view('admin.post.edit', $data);
     }
@@ -98,8 +88,7 @@ class PostController extends Controller
                             ->withSuccess('Post saved.');
         }
 
-        return redirect()
-                        ->route('admin.post')
+        return redirect('/admin/post')
                         ->withSuccess('Post saved.');
     }
 
@@ -115,8 +104,7 @@ class PostController extends Controller
         $post->tags()->detach();
         $post->delete();
 
-        return redirect()
-                        ->route('admin.post')
+        return redirect('/admin/post')
                         ->withSuccess('Post deleted.');
     }
 }
