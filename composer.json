@@ -11,7 +11,8 @@
         "michelf/php-smartypants": "dev-lib",
         "dflydev/apache-mime-types": "^1.0",
         "doctrine/dbal": "^2.5",
-        "jellybool/translug": "^1.0"
+        "jellybool/translug": "^1.0",
+        "suin/php-rss-writer": "^1.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

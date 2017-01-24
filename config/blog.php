@@ -7,7 +7,8 @@ return [
     'author' => '学院君',
     'page_image' => 'home-bg.jpg',
     'posts_per_page' => 10,
-    'contact_email' => 'junlyyouny@163.com',
+    'rss_size' => 25,
+    'contact_email' => env('MAIL_FROM'),
     'uploads' => [
         'storage' => 'local',
         'webpath' => '/uploads',

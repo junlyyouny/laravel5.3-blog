@@ -287,6 +287,13 @@ class ComposerStaticInit09221516fa01db0cf74aae15eb8727ea
     );
 
     public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Suin\\RSSWriter' => 
+            array (
+                0 => __DIR__ . '/..' . '/suin/php-rss-writer/src',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 
@@ -380,9 +387,11 @@ class ComposerStaticInit09221516fa01db0cf74aae15eb8727ea
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Providers\\PinyinServiceProvider' => __DIR__ . '/../..' . '/app/Providers/PinyinServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Services\\BlogIndexData' => __DIR__ . '/../..' . '/app/Services/BlogIndexData.php',
         'App\\Services\\Markdowner' => __DIR__ . '/../..' . '/app/Services/Markdowner.php',
+        'App\\Services\\Pinyin' => __DIR__ . '/../..' . '/app/Services/Pinyin.php',
         'App\\Services\\PostFormFields' => __DIR__ . '/../..' . '/app/Services/PostFormFields.php',
         'App\\Services\\UploadsManager' => __DIR__ . '/../..' . '/app/Services/UploadsManager.php',
         'App\\Tag' => __DIR__ . '/../..' . '/app/Tag.php',
@@ -3098,6 +3107,13 @@ class ComposerStaticInit09221516fa01db0cf74aae15eb8727ea
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\ResourceOperations\\ResourceOperations' => __DIR__ . '/..' . '/sebastian/resource-operations/src/ResourceOperations.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Suin\\RSSWriter\\Channel' => __DIR__ . '/..' . '/suin/php-rss-writer/src/Suin/RSSWriter/Channel.php',
+        'Suin\\RSSWriter\\ChannelInterface' => __DIR__ . '/..' . '/suin/php-rss-writer/src/Suin/RSSWriter/ChannelInterface.php',
+        'Suin\\RSSWriter\\Feed' => __DIR__ . '/..' . '/suin/php-rss-writer/src/Suin/RSSWriter/Feed.php',
+        'Suin\\RSSWriter\\FeedInterface' => __DIR__ . '/..' . '/suin/php-rss-writer/src/Suin/RSSWriter/FeedInterface.php',
+        'Suin\\RSSWriter\\Item' => __DIR__ . '/..' . '/suin/php-rss-writer/src/Suin/RSSWriter/Item.php',
+        'Suin\\RSSWriter\\ItemInterface' => __DIR__ . '/..' . '/suin/php-rss-writer/src/Suin/RSSWriter/ItemInterface.php',
+        'Suin\\RSSWriter\\SimpleXMLElement' => __DIR__ . '/..' . '/suin/php-rss-writer/src/Suin/RSSWriter/SimpleXMLElement.php',
         'SuperClosure\\Analyzer\\AstAnalyzer' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Analyzer/AstAnalyzer.php',
         'SuperClosure\\Analyzer\\ClosureAnalyzer' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Analyzer/ClosureAnalyzer.php',
         'SuperClosure\\Analyzer\\Token' => __DIR__ . '/..' . '/jeremeamia/SuperClosure/src/Analyzer/Token.php',
