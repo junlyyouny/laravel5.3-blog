@@ -74,7 +74,9 @@ gulp.task("copyfiles", function() {
     gulp.src("vendor/bower_dl/pickadate/lib/compressed/picker.time.js")
         .pipe(gulp.dest("public/assets/pickadate/"));
 
-
+    // Copy clean-blog less files
+    gulp.src("vendor/bower_dl/clean-blog/less/**")
+        .pipe(gulp.dest("resources/assets/less/clean-blog"));
 });
 
 elixir(mix => {
@@ -93,7 +95,18 @@ elixir(mix => {
         'resources/assets'
     );
 
+    // Combine blog scripts
+    mix.scripts([
+            'js/jquery.js',
+            'js/bootstrap.js',
+            'js/blog.js'
+        ], 
+        'public/assets/js/blog.js', 
+        'resources//assets'
+    );
+
     // 编译 Less 
     mix.less('admin.less', 'public/assets/css/admin.css');
+    mix.less('blog.less', 'public/assets/css/blog.css');
 });
 

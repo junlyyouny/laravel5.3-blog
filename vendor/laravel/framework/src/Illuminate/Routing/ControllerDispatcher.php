@@ -43,6 +43,7 @@ class ControllerDispatcher
         if (method_exists($controller, 'callAction')) {
             return $controller->callAction($method, $parameters);
         }
+
         return call_user_func_array([$controller, $method], $parameters);
     }
 

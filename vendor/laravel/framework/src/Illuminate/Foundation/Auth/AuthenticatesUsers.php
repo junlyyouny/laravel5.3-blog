@@ -155,10 +155,7 @@ trait AuthenticatesUsers
 
         $request->session()->regenerate();
 
-        $uri = property_exists($this, 'redirectAfterLogout') 
-                ? $this->redirectAfterLogout : '/';
-        
-        return redirect($uri);
+        return redirect('/');
     }
 
     /**
