@@ -56,6 +56,6 @@ class Tag extends Model
     {
         $layout = static::whereTag($tag)->pluck('layout');
 
-        return $layout ?: $default;
+        return $layout ? $layout->first() : $default;
     }
 }

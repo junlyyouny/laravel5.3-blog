@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Tag;
 use Carbon\Carbon;
 use App\Services\BlogIndexData;
 use App\Services\RssFeed;
@@ -30,6 +31,7 @@ class BlogController extends Controller
     {
         $tag = $request->get('tag');
         $data = $this->indexData->indexData($tag);
+        
         $layout = $tag ? Tag::layout($tag) : 'blog.layouts.index';
 
         return view($layout, $data);
