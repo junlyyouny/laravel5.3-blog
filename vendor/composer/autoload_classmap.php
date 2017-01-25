@@ -42,6 +42,8 @@ return array(
     'App\\Services\\Markdowner' => $baseDir . '/app/Services/Markdowner.php',
     'App\\Services\\Pinyin' => $baseDir . '/app/Services/Pinyin.php',
     'App\\Services\\PostFormFields' => $baseDir . '/app/Services/PostFormFields.php',
+    'App\\Services\\RssFeed' => $baseDir . '/app/Services/RssFeed.php',
+    'App\\Services\\SiteMap' => $baseDir . '/app/Services/SiteMap.php',
     'App\\Services\\UploadsManager' => $baseDir . '/app/Services/UploadsManager.php',
     'App\\Tag' => $baseDir . '/app/Tag.php',
     'App\\User' => $baseDir . '/app/User.php',

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "60146d559d669b1b06f317e7e11f62f0",
+    "content-hash": "caeb36018eae56e260e62e58e9c01083",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1240,7 +1240,7 @@
         },
         {
             "name": "michelf/php-smartypants",
-            "version": "dev-lib",
+            "version": "1.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/michelf/php-smartypants.git",
@@ -1286,7 +1286,7 @@
                 "typographer",
                 "typography"
             ],
-            "time": "2016-12-13 01:01:17"
+            "time": "2016-12-13T01:01:17+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -4327,9 +4327,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "michelf/php-smartypants": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

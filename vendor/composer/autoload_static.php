@@ -393,6 +393,8 @@ class ComposerStaticInit09221516fa01db0cf74aae15eb8727ea
         'App\\Services\\Markdowner' => __DIR__ . '/../..' . '/app/Services/Markdowner.php',
         'App\\Services\\Pinyin' => __DIR__ . '/../..' . '/app/Services/Pinyin.php',
         'App\\Services\\PostFormFields' => __DIR__ . '/../..' . '/app/Services/PostFormFields.php',
+        'App\\Services\\RssFeed' => __DIR__ . '/../..' . '/app/Services/RssFeed.php',
+        'App\\Services\\SiteMap' => __DIR__ . '/../..' . '/app/Services/SiteMap.php',
         'App\\Services\\UploadsManager' => __DIR__ . '/../..' . '/app/Services/UploadsManager.php',
         'App\\Tag' => __DIR__ . '/../..' . '/app/Tag.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
