@@ -102,7 +102,7 @@ elixir(mix => {
             'js/blog.js'
         ], 
         'public/assets/js/blog.js', 
-        'resources//assets'
+        'resources/assets'
     );
 
     // 编译 Less 
