@@ -2,7 +2,7 @@
 return [
 	'name' => "Junlyde Blog",
     'title' => 'Junlyde Blog',
-    'subtitle' => 'Based Laravel 5.3',
+    'subtitle' => 'Based on Laravel 5.3',
     'description' => '基于Laravel 5.3，根据学院君博客教程创建',
     'author' => 'Junly',
     'page_image' => 'home-bg.jpg',
