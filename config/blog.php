@@ -13,4 +13,5 @@ return [
         'storage' => 'local',
         'webpath' => '/uploads',
     ],
+    'discuss_area' => false,
 ];
